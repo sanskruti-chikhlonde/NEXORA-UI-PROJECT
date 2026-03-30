@@ -1,0 +1,144 @@
+/*Reset*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/*Body*/
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+/*Navbar*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: cyan;
+}
+
+/*Logo*/
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(90deg, cyan, purple);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.logo:hover {
+  text-shadow: 0 0 10px cyan, 0 0 20px purple;
+}
+
+/*Hero Section*/
+.hero {
+  text-align: center;
+  margin-top: 100px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+/*Button*/
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: cyan;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 10px cyan, 0 0 20px purple;
+  transform: scale(1.05);
+}
+
+/*Features Section*/
+.features {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/*Cards*/
+.card {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  width: 250px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 15px cyan;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
